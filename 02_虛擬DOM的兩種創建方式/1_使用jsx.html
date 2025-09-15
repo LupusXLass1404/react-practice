@@ -28,6 +28,18 @@
 
         // 渲染虛擬DOM到頁面
         ReactDOM.render(VDOM, document.getElementById('test'));
+
+        const TDOM = document.getElementById('test');
+        console.log('虛擬', VDOM);
+        console.log('真實', TDOM);
+        // debugger;
+        // console.log(typeof VDOM);
+        // console.log(VDOM instanceof Object);
+        /*
+            1.虛擬DOM是object類型的物件
+            2.虛擬DOM比較「輕」，真實DOM比較「重」，因為需你DOM是React內部使用，不需要真實DOM上的這麼多屬性
+            3.虛擬DOM最終惠被React轉化為真實DOM，呈現在頁面上
+        */
     </script>
 </body>
 

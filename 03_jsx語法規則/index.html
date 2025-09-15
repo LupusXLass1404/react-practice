@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pink {
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test"></div>
+
+    <!-- 引入react核心庫 -->
+    <script type="text/javascript" src="../js/react.development.js"></script>
+    <!-- 引入react-dom，用於支持react操作DOM -->
+    <script type="text/javascript" src="../js/react-dom.development.js"></script>
+    <!-- 引入babel，用於將jsx轉為js -->
+    <script type="text/javascript" src="../js/babel.min.js"></script>
+
+    <!-- 不能寫jsx，要寫babel -->
+    <script type="text/babel">
+        const myId = "title";
+        const myContent = "Hello, React";
+        const VDOM = (
+            <div>
+                <h1 id={myId.toLowerCase()} className="pink">
+                    <span style={{ color: 'white', fontSize: '40px' }}>{myContent}</span>
+                </h1>
+                <h1 id={myId.toUpperCase()} className="pink">
+                    <span style={{ color: 'white', fontSize: '40px' }}>{myContent}</span>
+                </h1>
+                <input type="checkbox" />
+                <My>123</My>
+            </div>
+        );
+
+        ReactDOM.render(VDOM, document.getElementById('test'));
+
+        /*
+            jsx語法規則
+                1.定義虛擬DOM時，不要寫引號。
+                2.在標籤中放入JS表達式時，要用{}。（也不要寫引號）
+                3.在標籤中寫樣式時，要寫className。
+                4.行內樣式的格式：style={{key:value}}
+                5.只能有一個根標籤
+                6.標籤必須閉合
+                7.標籤首字母
+                    (1).小寫字母開頭，會將標籤轉為html中的同名元素。若html中無對應標籤，則報錯。
+                    (2).大寫字母開頭，react會去渲染對應的組件。若組件未定義，則報錯。
+        */
+    </script>
+</body>
+
+</html>

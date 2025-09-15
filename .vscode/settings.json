@@ -1,3 +1,23 @@
 {
-    "liveServer.settings.port": 5501
+"workbench.colorCustomizations": {
+    // 背景
+    "editor.background": "#101526",
+    "sideBar.background": "#1A1F36",
+    "activityBar.background": "#1A1F36",
+    "statusBar.background": "#1A1F36",
+    "titleBar.activeBackground": "#1A1F36",
+    "titleBar.inactiveBackground": "#101526",
+    "panel.background": "#101526",
+    "tab.activeBackground": "#101526",
+    "tab.inactiveBackground": "#1A1F36",
+
+    // 框線 / 分隔線
+    "sideBar.border": "#242A4A",
+    "activityBar.border": "#242A4A",
+    "panel.border": "#242A4A",
+    "tab.border": "#242A4A",
+    "editorGroup.border": "#242A4A",
+    "statusBar.border": "#242A4A",
+    "titleBar.border": "#242A4A",
+}
 }
